@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purpal">@android:color/holo_purple</color>
+     <color name="blues">@android:color/holo_blue_bright</color>
+    <color name="blues1">@android:color/holo_blue_light</color>
+    <color name="blues2">@android:color/holo_blue_light</color>
+
+    <color name="deep_green">#00FF00</color>
+    <color name="bright_red">#FF0000</color>
+
+    <color name="progress_color">#FF6347</color>  <!-- Tomato red for progress -->
+    <color name="thumb_color">#4CAF50</color>     <!-- Green for thumb -->
+    <color name="track_color">#D3D3D3</color>
+
+</resources>
+

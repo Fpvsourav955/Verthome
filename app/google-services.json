@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "561675601566",
+    "firebase_url": "https://verthome-f7b0d-default-rtdb.firebaseio.com",
+    "project_id": "verthome-f7b0d",
+    "storage_bucket": "verthome-f7b0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561675601566:android:9f7885d80da300c10d9d8f",
+        "android_client_info": {
+          "package_name": "com.sourav.verthome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561675601566-loe8rqn4lvtfgk583986ofb2jrg4nen4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sourav.verthome",
+            "certificate_hash": "11314b3011032dd948856c6c3f3e3b2c2065b2f6"
+          }
+        },
+        {
+          "client_id": "561675601566-jv4lgc2lldpopv4jas4pj6drn5fp1mi6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV1Oos1kPWFJP3n7PrlU1m4zRYACdFCtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561675601566-jv4lgc2lldpopv4jas4pj6drn5fp1mi6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/about2back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back"
+                android:padding="20dp"
+
+                app:srcCompat="@drawable/back_arrow" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/verthome"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/light"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation8"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/descriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verthome_is_the_ultimate_companion_for_your_smart_home_giving_you_complete_control_and_security_at_your_fingertips_acting_as_your_home_s_master_control_hub_it_lets_you_remotely_manage_appliances_adjust_camera_angles_and_monitor_real_time_video_feeds_ensuring_everything_runs_smoothly_whether_you_re_at_home_or_away_n_nwith_built_in_smart_security_features_verthome_continuously_tracks_movement_outside_your_home_and_alerts_you_instantly_if_any_unusual_activity_is_detected_whether_it_s_your_backyard_garden_or_entrance_you_ll_always_know_what_s_happening_if_no_one_is_home_verthome_records_and_stores_detected_events_so_you_can_review_them_anytime_n_ndesigned_for_ease_of_use_the_app_provides_seamless_remote_access_allowing_you_to_control_and_automate_devices_with_just_a_few_taps_from_switching_lights_and_appliances_on_or_off_to_monitoring_live_feeds_verthome_keeps_you_connected_to_your_home_no_matter_where_you_are_n_nstay_in_control_stay_secure_and_experience_the_future_of_home_automation_with_verthome"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingTop="10dp"/>
+            </ScrollView>
+            <TextView
+                android:id="@+id/appVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/version_1_1"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/light"
+                android:textStyle="bold"
+                android:paddingBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/teamCredits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/by_team_hydra"
+                android:textSize="14sp"
+                android:fontFamily="@font/light"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingBottom="10dp"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

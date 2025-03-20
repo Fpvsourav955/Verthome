@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true"
+    tools:context=".AboutAnshuman">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <ImageView
+                    android:id="@+id/back1"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/back"
+                    android:padding="20dp"
+
+                    app:srcCompat="@drawable/back_arrow" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/light"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_background"
+                    android:layout_margin="20dp">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/playwriteregular"
+                        android:textStyle="bold"
+                        android:padding="20dp"
+                        android:text="@string/anshumah_mahanta"/>
+                    <ScrollView
+                        android:layout_marginTop="60dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        tools:ignore="NestedScrolling">
+                    <TextView
+                        android:id="@+id/anDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:lineSpacingExtra="5dp"
+                        android:textStyle="normal"
+                        android:padding="10dp"
+                        android:gravity="start"
+                        android:scrollbars="vertical"/>
+                    </ScrollView>
+
+
+
+                </RelativeLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#B364FA"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/anshuman"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

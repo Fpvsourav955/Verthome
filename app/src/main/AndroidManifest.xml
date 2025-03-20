@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="Verthome"
+        android:roundIcon="@mipmap/ic_launcher1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VerThome"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".TermConditions"
+            android:exported="false" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".EmailPhone"
+            android:exported="false" />
+        <activity
+            android:name=".Splash7"
+            android:exported="false" />
+        <activity
+            android:name=".Splash6"
+            android:exported="false" />
+        <activity
+            android:name=".Splash5"
+            android:exported="false" />
+        <activity
+            android:name=".Splash4"
+            android:exported="false" />
+        <activity
+            android:name=".Splash3"
+            android:exported="false" />
+        <activity
+            android:name=".Splash2"
+            android:exported="false" />
+        <activity
+            android:name=".Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".Camera"
+            android:exported="false" />
+
+        <activity
+            android:name=".AcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlugActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UnderHome"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".AboutMukesh"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".AboutAnshuman"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".AboutSourav"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".TeamActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Permission"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".RealTime"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+            android:value="true" />
+
+
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+        </service>
+<!--        <service-->
+<!--            android:name=".SensorService"-->
+<!--            android:foregroundServiceType="location"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false" />-->
+<!--        <service-->
+<!--            android:name=".RainMonitoringService"-->
+<!--            android:foregroundServiceType="location"-->
+<!--            android:stopWithTask="false" />-->
+
+    </application>
+
+</manifest>

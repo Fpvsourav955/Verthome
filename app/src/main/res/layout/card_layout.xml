@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    android:padding="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="40dp"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_background">
+
+            <!-- ImageView -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/add_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+               android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/sweethome" />
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/Add_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/light"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/add_image"
+                app:layout_constraintTop_toTopOf="@id/add_image"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Address TextView -->
+            <TextView
+                android:id="@+id/Add_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/light"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/add_image"
+                app:layout_constraintTop_toBottomOf="@id/Add_title"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Host ID TextView -->
+            <TextView
+                android:id="@+id/Add_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/light"
+                android:text="@string/host_id"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/Add_title"
+                app:layout_constraintTop_toBottomOf="@id/Add_address" />
+
+            <!-- ID TextView -->
+            <TextView
+                android:id="@+id/Add_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingStart="4dp"
+                android:fontFamily="@font/light"
+                android:text="ID"
+                android:layout_marginStart="200dp"
+                android:textColor="#e3eefc"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

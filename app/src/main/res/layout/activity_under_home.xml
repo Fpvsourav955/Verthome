@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderHome"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="#e3eefc">
+
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/aboutback3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/back"
+                android:padding="20dp"
+                app:srcCompat="@drawable/back_arrow" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/light"
+                android:gravity="center"
+                android:text="@string/dashboard"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            app:cardMaxElevation="12dp"
+            app:cardElevation="8dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:background="@drawable/under_background"
+                tools:ignore="TextSizeCheck">
+
+                <TextView
+                    android:id="@+id/home_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lexenddecabold"
+                    android:text="@string/title"
+
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/greetingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/light"
+                    android:text="@string/morning"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/light"
+                    android:text="@string/_29_01_2022"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="70dp"
+                    android:gravity="start"
+                    android:text="@string/fetching_location_n_and_temperature"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/logoanimation1"
+                    android:layout_width="180dp"
+                    android:layout_height="170dp"
+                    android:layout_marginStart="170dp"
+
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/weather1" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e3eefc"
+            android:fillViewport="true"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardMaxElevation="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/voltage_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/under_background">
+
+                        <!-- Voltage Progress -->
+                        <RelativeLayout
+                            android:layout_marginEnd="16dp"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:padding="8dp"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                android:layout_width="120dp"
+                                android:layout_height="110dp"
+                                android:id="@+id/voltage_bar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:background="@drawable/circle_shape"
+                                android:progressDrawable="@drawable/circular_progress_bar"
+                                android:indeterminate="false"/>
+
+                            <TextView
+                                android:id="@+id/voltTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/v"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/light"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:padding="8dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                android:layout_width="120dp"
+                                android:layout_height="110dp"
+                                android:id="@+id/current_bar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:background="@drawable/circle_shape"
+                                android:progressDrawable="@drawable/circular_progress_bar"
+                                android:indeterminate="false"/>
+
+                            <TextView
+                                android:id="@+id/currTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/c"
+                                android:fontFamily="@font/light"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                         android:id="@+id/view7"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/under_background">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/cctv" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/under_background">
+
+                        <RelativeLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" >
+                            <TextView
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="16dp"
+                                android:id="@+id/Rain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:fontFamily="@font/light"
+                                android:text="@string/rain"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:layout_marginStart="10dp"
+
+                                android:id="@+id/tempTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="64dp"
+
+
+                                android:fontFamily="@font/light"
+                                android:gravity="start"
+                                android:text="@string/temperature"
+
+                                android:textColor="@color/white"
+
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/humTextView"
+                                android:layout_width="wrap_content"
+                                android:gravity="start"
+                                android:layout_marginBottom="20dp"
+
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/light"
+                                android:layout_alignParentBottom="true"
+
+                                android:text="@string/humidity"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+
+                                android:textStyle="bold"
+
+                                tools:ignore="SmallSp" />
+
+                        </RelativeLayout>
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation10"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/logoanimation12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/rain" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation12"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/logoanimation13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:lottie_autoPlay="false"
+                            app:lottie_loop="false"
+                            app:lottie_rawRes="@raw/tempac" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation13"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/humid" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardMaxElevation="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/under_background"
+                        tools:ignore="TextSizeCheck">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/lights"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/units_4"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="74dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connection_status"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:id="@+id/lightstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="94dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connected"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation5"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="200dp"
+
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/lighthome"
+                            app:lottie_repeatMode="restart" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardMaxElevation="12dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/under_background"
+                        tools:ignore="TextSizeCheck">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/ac"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/units_2"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="74dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connection_status"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/acstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="94dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connected"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation4"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="200dp"
+
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/acjson"
+                            app:lottie_repeatMode="restart"
+
+                            app:lottie_speed="0.5"
+                            tools:ignore="ImageContrastCheck" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardMaxElevation="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/under_background"
+                        tools:ignore="TextSizeCheck">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/fan"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/units_2"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="74dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connection_status"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fanstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="94dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connected"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation8"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="200dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/fanan"
+                            app:lottie_speed="0.5" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardMaxElevation="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/under_background"
+                        tools:ignore="TextSizeCheck">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/power_plugs"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/units_4"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="74dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/connection_status"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/plugstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="94dp"
+                            android:fontFamily="@font/light"
+                            android:text="@string/disconected"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="200dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/plugan" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardMaxElevation="12dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/under_background">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv"
+                        android:fontFamily="@font/light"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/units_1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/light"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="50dp"/>
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/connection_status"
+                        android:fontFamily="@font/light"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="74dp"/>
+                    <TextView
+                        android:id="@+id/tvstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/connected"
+                        android:fontFamily="@font/light"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="94dp"/>
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/logoanimation2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="200dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/tvan"
+                            tools:ignore="ImageContrastCheck" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
